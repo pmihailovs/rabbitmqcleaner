@@ -1,0 +1,3 @@
+﻿list -o list.txt -f txt --verbose
+
+clean -i exchangeList.txt -f txt --verbose
