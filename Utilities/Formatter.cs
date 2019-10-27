@@ -225,7 +225,7 @@ namespace ExchangeCleaner.Utilities
 
                 return exchange;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }

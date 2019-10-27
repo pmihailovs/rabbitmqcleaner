@@ -1,0 +1,3 @@
+﻿#ICP.Common.Messaging.Messages.Ledger.Commands.CalculateNavisionExportDataCommand
+ICP.Common.Messaging.Messages.Ledger.Commands:CalculateNavisionExportDataCommand
+MassTransit:Fault--ICP.Common.Messaging.Messages.Ledger.Commands:CalculateNavisionExportDataCommand--

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Threading.Tasks;
 using CommandLine;
-using ExchangeCleaner.Utilities;
+using ICP.Common.Extensions.Settings;
 
 namespace ExchangeCleaner
 {

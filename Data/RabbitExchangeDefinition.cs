@@ -77,6 +77,7 @@ namespace ExchangeCleaner.Data
                 return value;
             }
 
+            //var result = new StringBuilder();
             var buffer = new StringBuilder();
             char letter;
 
@@ -110,6 +111,32 @@ namespace ExchangeCleaner.Data
             }
 
             return buffer.Reverse().ToString();
+
+            //for (int i = 0; i < value.Length; i++)
+            //{
+            //    letter = value[i];
+
+            //    switch (letter)
+            //    {
+            //        case '.':
+            //            buffer.Length = 0;
+            //            break;
+            //        case '<':
+            //        case '>':
+            //            {
+            //                result.Append(letter).Append(buffer.ToString());
+            //                buffer.Length = 0;
+            //            }
+            //            break;
+            //        default:
+            //            buffer.Append(letter);
+            //            break;
+            //    }
+            //}
+
+            //result.Append(buffer.ToString());
+
+            //return result.ToString();
         }
 
         public override bool Equals(object obj)

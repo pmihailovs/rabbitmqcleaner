@@ -1,0 +1,6 @@
+#InitiateInvoiceFundsAllocationCommand
+Fault--ICP.Common.Messaging.Messages.Sagas:AccountCancelFeeFlow--ICP.Common.Messaging.Messages.Account.Commands:InitiateInvoiceFundsAllocationCommand----
+Fault--ICP.Common.Messaging.Messages.Sagas:ISagaFLow--ICP.Common.Messaging.Messages.Account.Commands:InitiateInvoiceFundsAllocationCommand----
+Fault--ICP.Common.Messaging.Messages.Sagas:AccountCancelFeeFlow--ICP.Common.Messaging.Messages.Account.Commands:InitiateInvoiceFundsAllocationCommand----
+Fault--ICP.Common.Messaging.Messages.Sagas:AccountCancelFeeFlow--ICP.Common.Messaging.Messages.Account.Commands:InitiateInvoiceFundsAllocationCommand----
+

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using ExchangeCleaner.Data;
 using ExchangeCleaner.Utilities;
 using HareDu;
 using HareDu.Resources;
+using Newtonsoft.Json;
 
 namespace ExchangeCleaner
 {
@@ -117,6 +119,7 @@ namespace ExchangeCleaner
 
         public async Task CleanQueues(CleanQueuesOptions options)
         {
+            var formatter = new Formatter();
             string[] queuesToRemove = File.ReadAllLines(options.InputFile);
 
             if (queuesToRemove == null || queuesToRemove.Count() == 0)
@@ -138,7 +141,7 @@ namespace ExchangeCleaner
                         if (!string.Equals(queue.VirtualHostName, _config.MQVirtualHost))
                             continue;
 
-                        if (string.Equals(queueToRemove, queue.Name, StringComparison.OrdinalIgnoreCase))
+                        if (string.Equals(queueToRemove, queue.Name, StringComparison.Ordinal))
                         {
                             Output(options.Verbose, queue.Name);
                             queuesToBeRemoved.Add(queue);
@@ -197,6 +200,7 @@ namespace ExchangeCleaner
             var exchangeTranslations = ReadExchangeDefinition(exchanges, options.Verbose);
 
             var notFoundInFileSource = new List<RabbitExchangeDefinition>();
+            //var notFoundInExchange = new List<IRabbitExchangeDefinition>();
 
             var matched = false;
             Output(options.Verbose, "Not found in file source:");
